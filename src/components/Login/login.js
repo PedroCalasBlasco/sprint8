@@ -16,7 +16,7 @@ const Login = () => {
         let local1 = localStorage.getItem("userNameLocal");
         console.log("l ",local1);
         console.log(userPasswordLogin);
-        console.log(localStorage.getItem("userPasswordLocal").toString());
+        console.log(localStorage.getItem("userPasswordLocal"));
         console.log(isAuthenticated);
         // if (localStorage.getItem("userNameLocal") === userNameLogin && localStorage.getItem("userPasswordLocal") === userPasswordLogin){
         if(userNameLogin === localStorage.getItem("userNameLocal")){
