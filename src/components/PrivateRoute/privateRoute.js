@@ -1,21 +1,13 @@
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useParams, useNavigate, useLocation } from "react-router-dom";
 
 
-const PrivateRoute = ({ children, redirectTo, isAuth }) => { 
+const PrivateRoute = ({ children, redirectTo}) => { 
 
-     const {name} = useParams();
-     console.log("PEDRO");
-     console.log(name);
-     console.log(localStorage.getItem("userNameLocal"));
-    
-        
-    return isAuth ? children : <Navigate to={redirectTo} />;
-
-    // return name === localStorage.getItem("userNameLocal") ? children : <Navigate to={redirectTo} />;
-    
+    let as = useLocation();
+            
+    return as.pathname === '/naus/true/' ? children : <Navigate to={redirectTo} />;
    
 }
-
 export default PrivateRoute;
 
 

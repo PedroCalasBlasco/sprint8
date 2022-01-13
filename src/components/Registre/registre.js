@@ -17,8 +17,8 @@ const Registre = () =>{
 
 
    const saveLocalData = () => {
-        localStorage.setItem("userNameLocal", JSON.stringify(userName));
-        localStorage.setItem("userPasswordLocal", JSON.stringify(userPassword));
+        localStorage.setItem("userNameLocal", userName);
+        localStorage.setItem("userPasswordLocal", userPassword);
     };
 
     const getLocalData = () => {

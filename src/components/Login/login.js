@@ -11,47 +11,17 @@ const Login = () => {
     
 
     useEffect(() => {
-        console.log("PEDROOOOO SOY");
-        console.log(userNameLogin);
-        let local1 = localStorage.getItem("userNameLocal");
-        console.log("l ",local1);
-        console.log(userPasswordLogin);
-        console.log(localStorage.getItem("userPasswordLocal"));
-        console.log(isAuthenticated);
-        // if (localStorage.getItem("userNameLocal") === userNameLogin && localStorage.getItem("userPasswordLocal") === userPasswordLogin){
-        if(userNameLogin === localStorage.getItem("userNameLocal")){
+        console.log("--------------------", userNameLogin);
+        console.log("-------------------- ",localStorage.getItem("userNameLocal"));
+
+
+        if (localStorage.getItem("userNameLocal") === userNameLogin && localStorage.getItem("userPasswordLocal") === userPasswordLogin){       
             console.log("111111");
             setIsAutheticated(true);          
-        }     
+        };     
      
     },[userNameLogin,userPasswordLogin,isAuthenticated]);
 
-
-    // const user = (e) => {
-    //     setUserNameLogin(e);
-    //     console.log("PEDROOOOO");
-    //     console.log(userNameLogin);
-    //     console.log(localStorage.getItem("userNameLocal"));
-    //     console.log(userPasswordLogin);
-    //     console.log(localStorage.getItem("userPasswordLocal"));
-    //     if(localStorage.getItem("userNameLocal") === userNameLogin && localStorage.getItem("userPasswordLocal") === userPasswordLogin){
-    //         setIsAutheticated(true);
-            
-    //     }     
-    // }
-
-    // const passw = (e) => {
-    //     setUserPasswordLogin(e);
-    //     console.log("PEDROOOOO SOY");
-    //     console.log(userNameLogin);
-    //     console.log(localStorage.getItem("userNameLocal"));
-    //     console.log(userPasswordLogin);
-    //     console.log(localStorage.getItem("userPasswordLocal"));
-    //     if (localStorage.getItem("userNameLocal") === userNameLogin && localStorage.getItem("userPasswordLocal") === userPasswordLogin){
-    //         setIsAutheticated(true);
-            
-    //     }     
-    // }
 
     return (
         <StyledLoginDiv>
